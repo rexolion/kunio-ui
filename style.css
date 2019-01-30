@@ -1,0 +1,466 @@
+.Main {
+    width: 50%;
+    height: 100vh;
+    padding: 100px 0 0 100px;
+}
+
+.Slider {
+    width: 50%;
+}
+
+
+.Slider {
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 5px;   
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .Slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+  }
+  
+  .Slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    cursor: pointer;
+  }
+
+.Slider-container {
+    position: relative;
+    margin-bottom: 50px;
+}
+.Success-text {
+    margin-left: 30px;
+    float: left;
+    line-height: 40px;
+    height: 40px;
+    
+}
+.Success-container {
+    text-align: center;
+    line-height: 80px;
+    height: 40px;
+    width: 50%;
+    border: .5px solid;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+.Success-icon {
+    margin-top: 3px;
+    margin-left: 30px;
+    float: left;
+}
+
+.Small-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.Switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.Switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.Switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.Switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.Switch-slider {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+input:focus+.Switch-slider {
+    box-shadow: 0 0 1px #eb3349;
+}
+
+input:checked+.Switch-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.Switch-slider.Switch-slider-round {
+    border-radius: 34px;
+}
+
+.Switch-slider.Switch-slider-round:before {
+    border-radius: 50%;
+}
+
+.Checkmark {
+    background-repeat: no-repeat;
+    background-image: url("assets/tick.svg");
+    height: inherit;
+    width: 30px;
+
+}
+
+.Radio-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.Radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.Radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.Radio-container:hover input~.Radio-checkmark {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.Radio-container input:checked~.Radio-checkmark {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.Radio-container input:checked~.Radio-checkmark:after {
+    display: block;
+}
+
+.Radio-container .Radio-checkmark:after {
+    top: 10px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+}
+
+.Notif {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 34px;
+    width: 100px;
+    color: #ffffff;
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 30px 0 30px 30px;
+    border: 1px solid;
+}
+
+.Notif-close {
+    background-image: url("assets/cancelCl.svg");
+    height: 13px;
+    width: 13px;
+    background-size: cover;
+}
+
+.Checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.Checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+.Checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #eee;
+}
+
+
+.Checkbox-container:hover input~.Checkbox-checkmark {
+    background-color: #ccc;
+}
+
+
+.Checkbox-container input:checked~.Checkbox-checkmark {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.Checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.Checkbox-container input:checked~.Checkbox-checkmark:after {
+    display: block;
+}
+
+
+.Checkbox-container .Checkbox-checkmark:after {
+    left: 11px;
+    top: 4px;
+    width: 10px;
+    height: 17px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.Star {
+    margin-left: 30px;
+    background-size: cover;
+    background-image: url("assets/star.svg");
+    height: 34px;
+    width: 34px;
+}
+
+
+.Big {
+    display: flex;
+     
+}
+.Image {
+    height: 200px;
+    width: 200px;
+    background-color: #ccc;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Image-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url("assets/Vector.svg");
+    background-repeat: no-repeat;
+}
+
+.Button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Button {
+    font-size: 20px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 15px 0 15px 15px;
+}
+
+.Button_primary {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+}
+.Button_secondary:hover {
+    background: linear-gradient(to right, #eb3349, #f45c43); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+
+}
+
+
+.Pallete-wrap {
+    display: flex;
+    margin-top: 30px;
+}
+.Pallete-container {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-content: center;
+    box-shadow: 2px 3px #CCCCCC;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.Pallete-container:hover {
+    box-shadow: none;
+}
+.Pallete-color {
+    margin-top: 30px;
+    width: 150px;
+    height: 100px;
+    background-color: #fff;
+    align-self: center;
+}
+.Pallete_bl {
+    background-color: #000000;
+}
+.Pallete_gr {
+    background-color: #cccccc;
+}
+.Pallete_or {
+    background-color: #F45C43;
+}
+.Pallete_ch {
+    background-color: #EB3349;
+}
+
+
+.Icon {
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Icon-row {
+    margin-bottom: 50px;
+    justify-content: space-between;
+    display: flex;
+}
+.Icon-search {
+    height: 40px;
+    fill: url("#Gradient");
+    
+    background-repeat: no-repeat;
+    width: 40px;
+    background-image: url("assets/search.svg");
+}
+.Icon-burger {
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    fill: url("#Gradient");
+    background-image: url("assets/menu.svg");
+}
+.Icon-favorite {
+    fill: url("#Gradient");
+
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    background-image: url("assets/bookmark-white.svg");
+}
+.Icon-calender {
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    fill: url("#Gradient");
+
+    background-image: url("assets/calendar-with-a-clock-time-tools.svg");
+}
+.Icon-account {
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    fill: url("#Gradient");
+
+    background-image: url("assets/profile.svg");
+}
+.Icon-bell {
+    height: 40px;
+    background-repeat: no-repeat;
+    width: 40px;
+    background-image: url("assets/musical-bell-outline.svg");
+}
+.Icon-clock {
+    height: 40px;
+    fill: url("#Gradient");
+    background-repeat: no-repeat;
+    width: 40px;
+    background-image: url("assets/clock.svg");
+}
+.Icon-cross {
+    height: 40px;
+    fill: url("#Gradient");
+
+    background-repeat: no-repeat;
+    width: 40px;
+    background-image: url("assets/cancel.svg");
+}
+.Icon-arrow_left {
+    height: 40px;
+    width: 40px;
+    background-image: url("assets/");
+}
+.Icon-arrow_right {
+    height: 40px;
+    width: 40px;
+    background-image: url("assets/");
+}
+
+
